@@ -1,0 +1,83 @@
+[
+    {
+        "id": "silent-vanguard",
+        "title": "EDZ",
+        "expansion": "Red War",
+        "youtubeId": "2q4dWKUooTg",
+        "tags": ["ambient", "patrol"],
+        "mood": ["mysterious", "peaceful"],
+        "composer": "Michael Salvatori"
+    },
+    {
+        "id": "empty-throne",
+        "title": "Of Starlight and the Dark",
+        "expansion": "Forsaken",
+        "youtubeId": "BTrIuOHvpAg",
+        "tags": ["ambient", "cutscene"],
+        "mood": ["melancholic", "mysterious"],
+        "composer": "Michael Salvatori"
+    },
+    {
+        "id": "strength-of-memory",
+        "title": "Abomination",
+        "expansion": "Forsaken",
+        "youtubeId": "vUt4vkmSwGA",
+        "tags": ["combat", "strike"],
+        "mood": ["epic", "tense"],
+        "composer": "Michael Salvatori"
+    },
+    {
+        "id": "shadowkeep-theme",
+        "title": "Shadowkeep",
+        "expansion": "Shadowkeep",
+        "youtubeId": "nDCUH-HGPqc",
+        "tags": ["ambient", "cutscene"],
+        "mood": ["mysterious", "tense"],
+        "composer": "Skye Lewin"
+    },
+    {
+        "id": "a-glassy-ocean",
+        "title": "Europa",
+        "expansion": "Beyond Light",
+        "youtubeId": "0c_9VUNMvRk",
+        "tags": ["ambient", "patrol"],
+        "mood": ["peaceful", "melancholic"],
+        "composer": "Skye Lewin"
+    },
+    {
+        "id": "witch-queen-theme",
+        "title": "The Witch Queen",
+        "expansion": "Witch Queen",
+        "youtubeId": "RaC32yJB9po",
+        "tags": ["boss", "combat"],
+        "mood": ["epic", "tense"],
+        "composer": "Skye Lewin"
+    },
+    {
+        "id": "final-shape-theme",
+        "title": "The Final Shape",
+        "expansion": "The Final Shape",
+        "youtubeId": "bn64p7dNpHs",
+        "tags": ["cutscene", "ambient"],
+        "mood": ["triumphant", "melancholic"],
+        "composer": "Michael Salvatori"
+    },
+    {
+        "id": "the-wilds",
+        "title": "The Wilds",
+        "expansion": "Red War",
+        "youtubeId": "3kUix1xS1_g",
+        "tags": ["cutscene", "ambient"],
+        "mood": ["epic", "tense"],
+        "composer": "Michael Salvatori, Skye Lewin"
+    },
+    {
+        "id": "be-brave",
+        "title": "Be Brave",
+        "expansion": "Red War",
+        "youtubeId": "zwh8N8RJeck",
+        "tags": ["cutscene", "ambient"],
+        "mood": ["epic", "tense"],
+        "composer": "Michael Salvatori, Skye Lewin"
+    }
+]
