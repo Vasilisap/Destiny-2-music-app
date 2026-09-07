@@ -4,6 +4,7 @@ import "./globals.css";
 import { PlayerBar } from "@/components/layout/PlayerBar";
 import YoutubePlayer from "@/components/player/YoutubePlayer";
 import Navbar from "@/components/layout/Navbar";
+import FavoritesHydrator from "@/components/layout/FavoritesHydrator";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -22,6 +23,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
+        <FavoritesHydrator />
         <Navbar />
         <main className="min-h-screen bg-background pb-28">{children}</main>
 

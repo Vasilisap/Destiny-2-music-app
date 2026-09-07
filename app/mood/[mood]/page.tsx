@@ -1,5 +1,4 @@
 import TrackGrid from "@/components/track/TrackGrid";
-import { getFavoriteTrackIds } from "@/lib/favorites";
 import { getAllMoods, getTracksByMood } from "@/lib/tracks";
 import { notFound } from "next/navigation";
 
@@ -21,7 +20,6 @@ export default async function MoodPage({ params }: MoodPageProps) {
   if (!tracks || tracks.length === 0) notFound();
 
   const moodName = mood.charAt(0).toUpperCase() + mood.slice(1);
-  const favoriteIds = getFavoriteTrackIds();
 
   return (
     <div className="mx-auto max-w-7xl px-6 py-10">
@@ -32,7 +30,7 @@ export default async function MoodPage({ params }: MoodPageProps) {
         <p className="text-muted-foreground mt-1">{tracks.length} tracks</p>
       </div>
 
-      <TrackGrid tracks={tracks} favoriteIds={favoriteIds} />
+      <TrackGrid tracks={tracks} />
     </div>
   );
 }

@@ -9,10 +9,9 @@ import FavoriteButton from "./FavoriteButton";
 
 interface TrackCardProps {
     track: Track;
-    isFavorited: boolean;
 }
 
-export default function TrackCard({ track, isFavorited }: TrackCardProps) {
+export default function TrackCard({ track }: TrackCardProps) {
     const { currentTrack, isPlaying, play, pause, resume } = usePlayerStore();
 
     const isCurrentTrack = currentTrack?.id === track.id;
@@ -51,10 +50,7 @@ export default function TrackCard({ track, isFavorited }: TrackCardProps) {
                             {isPlaying ? "▶ Playing" : "⏸ Paused"}
                         </span>
                     )}
-                    <FavoriteButton
-                        trackId={track.id}
-                        initialFavorited={isFavorited}
-                    />
+                    <FavoriteButton trackId={track.id} />
                 </div>
             </div>
 

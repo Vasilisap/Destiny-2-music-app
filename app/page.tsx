@@ -1,5 +1,4 @@
 import FilterableTrackList from "@/components/track/FilterableTrackList";
-import { getFavoriteTrackIds } from "@/lib/favorites";
 import { getAllExpansions, getAllMoods, getAllTracks } from "@/lib/tracks";
 import Link from "next/link";
 
@@ -7,7 +6,6 @@ export default function Home() {
   const tracks = getAllTracks();
   const expansions = getAllExpansions();
   const moods = getAllMoods();
-  const favoriteIds = getFavoriteTrackIds();
   return (
     <div className="mx-auto max-w-7xl px-6 py-10">
       {/* Header */}
@@ -40,7 +38,6 @@ export default function Home() {
         tracks={tracks}
         expansions={expansions}
         moods={moods}
-        favoriteIds={favoriteIds}
       />
     </div>
   );

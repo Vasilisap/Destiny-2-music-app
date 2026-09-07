@@ -9,14 +9,12 @@ interface FilterableTrackListProps {
     tracks: Track[];
     expansions: Expansion[];
     moods: Mood[];
-    favoriteIds: string[];
 }
 
 export default function FilterableTrackList({
     tracks,
     expansions,
     moods,
-    favoriteIds,
 }: FilterableTrackListProps) {
     const [selectedExpansion, setSelectedExpansion] =
         useState<Expansion | null>(null);
@@ -59,7 +57,6 @@ export default function FilterableTrackList({
 
             <TrackGrid
                 tracks={filteredTracks}
-                favoriteIds={favoriteIds}
                 emptyMessage="No tracks match these filters."
             />
         </div>

@@ -36,8 +36,6 @@ yarn-error.log*
 # vercel
 .vercel
 
-# local sqlite runtime state (data/tracks.json is committed source data — this isn't)
-/data/app.db*
 
 # typescript
 *.tsbuildinfo
