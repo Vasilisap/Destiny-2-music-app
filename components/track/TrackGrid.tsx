@@ -3,11 +3,13 @@ import TrackCard from "./TrackCard";
 
 interface TrackGridProps {
     tracks: Track[];
+    favoriteIds: string[];
     emptyMessage?: string;
 }
 
 export default function TrackGrid({
     tracks,
+    favoriteIds,
     emptyMessage = "No tracks found.",
 }: TrackGridProps) {
     if (tracks.length === 0) {
@@ -21,7 +23,11 @@ export default function TrackGrid({
     return (
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
             {tracks.map((track) => (
-                <TrackCard key={track.id} track={track} />
+                <TrackCard
+                    key={track.id}
+                    track={track}
+                    isFavorited={favoriteIds.includes(track.id)}
+                />
             ))}
         </div>
     );

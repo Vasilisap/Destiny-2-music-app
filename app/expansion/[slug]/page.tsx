@@ -1,4 +1,5 @@
 import TrackGrid from "@/components/track/TrackGrid";
+import { getFavoriteTrackIds } from "@/lib/favorites";
 import {
     expansionToSlug,
     getAllExpansions,
@@ -24,6 +25,7 @@ export default async function page({ params }: ExpansionPageProps) {
     if (tracks.length === 0) notFound();
 
     const expansionName = tracks[0].expansion;
+    const favoriteIds = getFavoriteTrackIds();
 
     return (
         <div className="mx-auto max-w-7xl px-6 py-10">
@@ -38,7 +40,7 @@ export default async function page({ params }: ExpansionPageProps) {
                 </p>
             </div>
 
-            <TrackGrid tracks={tracks} />
+            <TrackGrid tracks={tracks} favoriteIds={favoriteIds} />
         </div>
     );
 }

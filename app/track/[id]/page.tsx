@@ -1,5 +1,7 @@
+import FavoriteButton from "@/components/track/FavoriteButton";
 import TrackPlayButton from "@/components/track/TrackPlayButton";
 import { Badge } from "@/components/ui/badge";
+import { getFavoriteTrackIds } from "@/lib/favorites";
 import { expansionToSlug, getAllTracks, getTrackById } from "@/lib/tracks";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -20,6 +22,8 @@ export default async function TrackPage({ params }: TrackPageProps) {
     const track = getTrackById(id);
 
     if (!track) notFound();
+
+    const favoriteIds = getFavoriteTrackIds();
 
     return (
         <div className="mx-auto max-w-3xl px-6 py-10">
@@ -66,7 +70,13 @@ export default async function TrackPage({ params }: TrackPageProps) {
             </div>
 
             {/* Play button — client component */}
-            <TrackPlayButton track={track} />
+            <div className="flex items-center gap-2">
+                <TrackPlayButton track={track} />
+                <FavoriteButton
+                    trackId={track.id}
+                    initialFavorited={favoriteIds.includes(track.id)}
+                />
+            </div>
 
             {/* Description */}
             {track.description && (

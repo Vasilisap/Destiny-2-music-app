@@ -5,8 +5,14 @@ import { Track } from "@/types/track";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import Link from "next/link";
+import FavoriteButton from "./FavoriteButton";
 
-export default function TrackCard({ track }: { track: Track }) {
+interface TrackCardProps {
+    track: Track;
+    isFavorited: boolean;
+}
+
+export default function TrackCard({ track, isFavorited }: TrackCardProps) {
     const { currentTrack, isPlaying, play, pause, resume } = usePlayerStore();
 
     const isCurrentTrack = currentTrack?.id === track.id;
@@ -39,11 +45,17 @@ export default function TrackCard({ track }: { track: Track }) {
                     </p>
                 </div>
 
-                {isCurrentTrack && (
-                    <span className="text-xs text-primary font-medium shrink-0">
-                        {isPlaying ? "▶ Playing" : "⏸ Paused"}
-                    </span>
-                )}
+                <div className="flex items-center gap-1 shrink-0">
+                    {isCurrentTrack && (
+                        <span className="text-xs text-primary font-medium">
+                            {isPlaying ? "▶ Playing" : "⏸ Paused"}
+                        </span>
+                    )}
+                    <FavoriteButton
+                        trackId={track.id}
+                        initialFavorited={isFavorited}
+                    />
+                </div>
             </div>
 
             <div className="flex flex-wrap gap-1.5">
