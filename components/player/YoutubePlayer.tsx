@@ -21,18 +21,39 @@ export default function YoutubePlayer() {
   const next = usePlayerStore((s) => s.next);
 
   const playerRef = useRef<YTPlayer | null>(null);
+  // True once the one, permanent player object exists and can receive
+  // commands. Never goes false again after that — see the long comment
+  // on <YouTube> below for why there is no more "player is mid-reset".
   const isReadyRef = useRef(false);
+  // The video currently loaded into the player, so a redundant load isn't
+  // requested when this effect re-runs for an unrelated reason (e.g. an
+  // isPlaying change on the same track).
+  const loadedYoutubeIdRef = useRef<string | undefined>(undefined);
 
-  // Mark the player "not ready" the instant the track changes, so nothing
-  // calls a method while react-youtube is mid-reload for the new video.
-  // onReady fires again once the reload completes (see comment on `key`
-  // below) and flips this back on with the fresh player reference.
+  // Load whatever track the store currently wants onto the existing
+  // player. Safe to call as often as needed — loadVideoById/cueVideoById
+  // swapping videos on a live player is exactly the playlist use case the
+  // IFrame API is built for, unlike destroying and recreating the player
+  // (see <YouTube> below), so there's no "busy" state to coordinate here.
   useEffect(() => {
-    isReadyRef.current = false;
-    playerRef.current = null;
-  }, [currentTrack?.id]);
+    const desired = currentTrack?.youtubeId;
+    if (!playerRef.current || !isReadyRef.current) return;
+    if (desired === undefined || desired === loadedYoutubeIdRef.current) return;
 
-  // Play / pause in response to store state
+    loadedYoutubeIdRef.current = desired;
+    try {
+      if (isPlaying) {
+        playerRef.current.loadVideoById({ videoId: desired });
+      } else {
+        playerRef.current.cueVideoById({ videoId: desired });
+      }
+    } catch (e) {
+      console.warn("Failed to load track into player:", e);
+    }
+  }, [currentTrack?.youtubeId, isPlaying]);
+
+  // Play / pause in response to store state, for a track that's already
+  // loaded (the effect above handles switching to a different track).
   useEffect(() => {
     if (!playerRef.current || !isReadyRef.current) return;
 
@@ -66,15 +87,6 @@ export default function YoutubePlayer() {
     return () => clearInterval(interval);
   }, [isPlaying, setCurrentTime]);
 
-  // Shared by onEnd and onError: move on if the queue has more, otherwise stop.
-  function advanceOrPause() {
-    if (hasNext()) {
-      next();
-    } else {
-      pause();
-    }
-  }
-
   if (!currentTrack) return null;
 
   return (
@@ -83,28 +95,60 @@ export default function YoutubePlayer() {
       aria-hidden
     >
       <YouTube
-        // No `key` here on purpose. Keying by track forced React to
-        // destroy this whole component and mount a fresh one on every
-        // track change — two independent, uncoordinated player lifecycles
-        // (old one still tearing down async while a new one starts up)
-        // racing each other, which is what threw "Cannot read properties
-        // of null (reading 'playVideo')" under rapid Next/Shuffle clicks.
-        // react-youtube already reacts to a changed `videoId` prop on its
-        // own: it destroys and rebuilds its internal player, but does so
-        // as one promise chain inside a single component instance, so
-        // there's never a moment with two competing player instances.
-        // onReady fires again after that reload, same as a fresh mount.
-        videoId={currentTrack.youtubeId}
+        // videoId is fixed at undefined, permanently — never bound to
+        // currentTrack. This player is created exactly once and never
+        // torn down again.
+        //
+        // The earlier design instead kept videoId in sync with the
+        // current track, relying on react-youtube's own reaction to a
+        // changed videoId prop: it destroys the whole underlying player
+        // and builds a new one (this is also why an even earlier version
+        // additionally forced a React remount via `key` — removed for a
+        // different bug, see git history). That destroy-then-recreate
+        // path goes through a promise chain in a third-party library two
+        // layers down (youtube-player's own destroy/create sequencing),
+        // and it does not reliably complete for a player that was
+        // actively playing when asked to reset — confirmed by tracing an
+        // actual session where the destroy step never resolved and the
+        // player was stuck for good, no crash, no timeout, nothing to
+        // catch.
+        //
+        // loadVideoById/cueVideoById below are the officially supported
+        // way to change what a single, already-created player is showing,
+        // and they don't go through that destroy/create sequence at all,
+        // so every track change after the first now avoids it entirely.
+        videoId={undefined}
         onReady={(e) => {
           playerRef.current = e.target;
           isReadyRef.current = true;
-          setDuration(e.target.getDuration());
-
-          if (isPlaying) {
-            e.target.playVideo();
+          // A track may already have been requested before this one-time
+          // ready event fired (e.g. the very first Play click). Load it
+          // now instead of waiting for a currentTrack change that has
+          // already happened.
+          if (currentTrack) {
+            loadedYoutubeIdRef.current = currentTrack.youtubeId;
+            if (isPlaying) {
+              e.target.loadVideoById({ videoId: currentTrack.youtubeId });
+            } else {
+              e.target.cueVideoById({ videoId: currentTrack.youtubeId });
+            }
           }
         }}
-        onEnd={advanceOrPause}
+        onStateChange={() => {
+          // Duration isn't known until the video has actually loaded, and
+          // onReady only ever fires once (for the empty player), so pick
+          // it up here instead, once per track once it becomes available.
+          if (playerRef.current) {
+            setDuration(playerRef.current.getDuration());
+          }
+        }}
+        onEnd={() => {
+          if (hasNext()) {
+            next();
+          } else {
+            pause();
+          }
+        }}
         onError={(e) => {
           console.warn(
             "YouTube playback failed for:",
@@ -112,11 +156,21 @@ export default function YoutubePlayer() {
             "— error code:",
             e.data,
           );
-          advanceOrPause();
+
+          if (hasNext()) {
+            next();
+          } else {
+            pause();
+          }
         }}
         opts={{
           playerVars: {
-            autoplay: 1,
+            // Deliberately NOT 1. Native autoplay is applied unconditionally
+            // once a video is ready, with no way to cancel it. Playback is
+            // driven entirely by isPlaying instead — loadVideoById above
+            // already autoplays when isPlaying is true, and cueVideoById
+            // loads without playing when it's false.
+            autoplay: 0,
             controls: 0,
             origin: typeof window !== "undefined" ? window.location.origin : "",
           },
