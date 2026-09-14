@@ -1,27 +1,42 @@
 "use client";
 
-import { useState } from "react";
 import { usePlayerStore } from "@/hooks/usePlayerStore";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Slider } from "@/components/ui/slider";
-
-function formatTime(seconds: number): string {
-    const m = Math.floor(seconds / 60);
-    const s = Math.floor(seconds % 60);
-    return `${m}:${s.toString().padStart(2, "0")}`;
-}
+import { SeekBar } from "./SeekBar";
+import { Shuffle, SkipBack, SkipForward } from "lucide-react";
 
 export function PlayerBar() {
-    const { currentTrack, isPlaying, currentTime, duration, pause, resume, stop, seek } =
-        usePlayerStore();
+    // Selectors, not a bulk destructure: this component must not re-render
+    // on the currentTime ticks that SeekBar subscribes to on its own.
+    const currentTrack = usePlayerStore((s) => s.currentTrack);
+    const isPlaying = usePlayerStore((s) => s.isPlaying);
+    const shuffle = usePlayerStore((s) => s.shuffle);
+    const pause = usePlayerStore((s) => s.pause);
+    const resume = usePlayerStore((s) => s.resume);
+    const stop = usePlayerStore((s) => s.stop);
+    const next = usePlayerStore((s) => s.next);
+    const previous = usePlayerStore((s) => s.previous);
+    const toggleShuffle = usePlayerStore((s) => s.toggleShuffle);
 
-    const [isDragging, setIsDragging] = useState(false);
-    const [dragValue, setDragValue] = useState(0);
+    // next()/previous() wrap the queue rather than stop at the ends (that
+    // "stop at the end" rule only applies to autoplay in YoutubePlayer's
+    // onEnd handler), so there is no "nowhere to go" state to disable for
+    // here — with a single-track queue this simply points back at itself,
+    // which matches what pressing the button actually does.
+    const upNextTrack = usePlayerStore((s) =>
+        s.queue.length > 0 ? s.queue[(s.queueIndex + 1) % s.queue.length] : undefined,
+    );
 
     if (!currentTrack) return null;
 
-    const displayTime = isDragging ? dragValue : currentTime;
+    function handlePlayPause() {
+        if (isPlaying) {
+            pause();
+        } else {
+            resume();
+        }
+    }
 
     return (
         <div className="fixed bottom-0 left-0 right-0 z-50 border-t bg-background/95 backdrop-blur supports-backdrop-filter:bg-background/60">
@@ -40,15 +55,47 @@ export function PlayerBar() {
                                 {currentTrack.mood[0]}
                             </Badge>
                         </div>
+                        {upNextTrack && (
+                            <span className="text-xs text-muted-foreground">
+                                Up next: {upNextTrack.title}
+                            </span>
+                        )}
                     </div>
 
-                    <div className="flex items-center gap-2">
+                    <div className="flex items-center gap-1">
+                        <Button
+                            variant="ghost"
+                            size="icon-sm"
+                            onClick={toggleShuffle}
+                            aria-label={
+                                shuffle ? "Turn shuffle off" : "Turn shuffle on"
+                            }
+                            aria-pressed={shuffle}
+                        >
+                            <Shuffle className={shuffle ? "text-primary" : ""} />
+                        </Button>
+                        <Button
+                            variant="ghost"
+                            size="icon-sm"
+                            onClick={previous}
+                            aria-label="Previous track"
+                        >
+                            <SkipBack />
+                        </Button>
                         <Button
                             variant="outline"
                             size="sm"
-                            onClick={isPlaying ? pause : resume}
+                            onClick={handlePlayPause}
                         >
                             {isPlaying ? "⏸ Pause" : "▶ Resume"}
+                        </Button>
+                        <Button
+                            variant="ghost"
+                            size="icon-sm"
+                            onClick={next}
+                            aria-label="Next track"
+                        >
+                            <SkipForward />
                         </Button>
                         <Button
                             variant="ghost"
@@ -61,30 +108,7 @@ export function PlayerBar() {
                     </div>
                 </div>
 
-                {/* Seek bar */}
-                <div className="flex items-center gap-3">
-                    <span className="w-10 text-right text-xs tabular-nums text-muted-foreground">
-                        {formatTime(displayTime)}
-                    </span>
-                    <Slider
-                        value={[displayTime]}
-                        min={0}
-                        max={duration || 100}
-                        step={1}
-                        className="flex-1"
-                        onValueChange={([value]) => {
-                            setIsDragging(true);
-                            setDragValue(value);
-                        }}
-                        onValueCommit={([value]) => {
-                            seek(value);
-                            setIsDragging(false);
-                        }}
-                    />
-                    <span className="w-10 text-xs tabular-nums text-muted-foreground">
-                        {formatTime(duration)}
-                    </span>
-                </div>
+                <SeekBar />
             </div>
         </div>
     );
