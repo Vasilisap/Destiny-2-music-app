@@ -1,5 +1,3 @@
-"use client";
-
 import { Expansion, Mood } from "@/types/track";
 import { Button } from "../ui/button";
 import { Badge } from "../ui/badge";
@@ -9,11 +7,19 @@ import Link from "next/link";
 interface TrackFilterProps {
   expansions: Expansion[];
   moods: Mood[];
-  selectedExpansion: Expansion | null;
-  selectedMood: Mood | null;
-  onExpansionChange: (expansion: Expansion | null) => void;
-  onMoodChange: (mood: Mood | null) => void;
-  onClear: () => void;
+  selectedExpansion: string | undefined;
+  selectedMood: string | undefined;
+}
+
+function buildFilterHref(
+  expansion: string | undefined,
+  mood: string | undefined,
+) {
+  const params = new URLSearchParams();
+  if (expansion) params.set("expansion", expansion);
+  if (mood) params.set("mood", mood);
+  const queryString = params.toString();
+  return queryString ? `/?${queryString}` : "/";
 }
 
 export default function TrackFilters({
@@ -21,9 +27,6 @@ export default function TrackFilters({
   moods,
   selectedExpansion,
   selectedMood,
-  onExpansionChange,
-  onMoodChange,
-  onClear,
 }: TrackFilterProps) {
   const hasActiveFilter = selectedExpansion || selectedMood;
   return (
@@ -36,19 +39,22 @@ export default function TrackFilters({
         <div className="flex flex-wrap gap-2">
           {expansions.map((expansion) => (
             <div key={expansion} className="flex items-center gap-1">
-              <Badge
-                variant={
-                  selectedExpansion === expansion ? "default" : "outline"
-                }
-                className="cursor-pointer capitalize"
-                onClick={() =>
-                  onExpansionChange(
-                    selectedExpansion === expansion ? null : expansion,
-                  )
-                }
+              <Link
+                href={buildFilterHref(
+                  expansion === selectedExpansion ? undefined : expansion,
+                  selectedMood,
+                )}
               >
-                {expansion}
-              </Badge>
+                <Badge
+                  variant={
+                    selectedExpansion === expansion ? "default" : "outline"
+                  }
+                  className="cursor-pointer capitalize"
+                >
+                  {expansion}
+                </Badge>
+              </Link>
+
               <Link
                 href={`/expansion/${expansionToSlug(expansion)}`}
                 className="text-xs text-muted-foreground hover:text-primary transition-colors"
@@ -68,15 +74,20 @@ export default function TrackFilters({
         <div className="flex flex-wrap gap-2">
           {moods.map((mood) => (
             <div key={mood} className="flex items-center gap-1">
-              <Badge
-                variant={selectedMood === mood ? "default" : "outline"}
-                className="cursor-pointer capitalize"
-                onClick={() =>
-                  onMoodChange(selectedMood === mood ? null : mood)
-                }
+              <Link
+                href={buildFilterHref(
+                  selectedExpansion,
+                  mood === selectedMood ? undefined : mood,
+                )}
               >
-                {mood}
-              </Badge>
+                <Badge
+                  variant={selectedMood === mood ? "default" : "outline"}
+                  className="cursor-pointer capitalize"
+                >
+                  {mood}
+                </Badge>
+              </Link>
+
               <Link
                 href={`/mood/${mood}`}
                 className="text-xs text-muted-foreground hover:text-primary transition-colors"
@@ -91,12 +102,12 @@ export default function TrackFilters({
       {/* Clear */}
       {hasActiveFilter && (
         <Button
+          asChild
           variant="ghost"
           size="sm"
           className="self-start text-muted-foreground"
-          onClick={onClear}
         >
-          Clear filters
+          <Link href="/">Clear filters</Link>
         </Button>
       )}
     </div>
