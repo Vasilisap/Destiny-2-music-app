@@ -1,11 +1,18 @@
-import FilterableTrackList from "@/components/track/FilterableTrackList";
+import FilteredTrackList from "@/components/track/FilteredTrackList";
+import TrackListSkeleton from "@/components/track/TrackListSkeleton";
 import { getAllExpansions, getAllMoods, getAllTracks } from "@/lib/tracks";
 import Link from "next/link";
+import { Suspense } from "react";
 
-export default function Home() {
+export default async function Home({
+  searchParams,
+}: {
+  searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
+}) {
   const tracks = getAllTracks();
   const expansions = getAllExpansions();
   const moods = getAllMoods();
+
   return (
     <div className="mx-auto max-w-7xl px-6 py-10">
       {/* Header */}
@@ -34,11 +41,14 @@ export default function Home() {
       </div>
 
       {/* Track grid */}
-      <FilterableTrackList
-        tracks={tracks}
-        expansions={expansions}
-        moods={moods}
-      />
+      <Suspense fallback={<TrackListSkeleton />}>
+        <FilteredTrackList
+          searchParams={searchParams}
+          allTracks={tracks}
+          expansions={expansions}
+          moods={moods}
+        />
+      </Suspense>
     </div>
   );
 }
