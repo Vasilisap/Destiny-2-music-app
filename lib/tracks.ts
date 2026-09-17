@@ -1,3 +1,4 @@
+import "server-only";
 import tracks from "@/data/tracks.json";
 import { Expansion, Mood, Tag, Track } from "@/types/track";
 
