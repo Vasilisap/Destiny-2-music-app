@@ -4,6 +4,7 @@ import { usePlayerStore } from "@/hooks/usePlayerStore";
 import { Track } from "@/types/track";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import { expansionAccent } from "@/lib/utils";
 import Link from "next/link";
 import FavoriteButton from "./FavoriteButton";
 
@@ -37,11 +38,19 @@ export default function TrackCard({ track, queue, index }: TrackCardProps) {
   return (
     <div
       className={`
-      rounded-lg border bg-card p-4 flex flex-col gap-3 transition-all
-      hover:border-primary/50 hover:shadow-sm cursor-pointer
+      relative overflow-hidden rounded-lg border bg-card p-4 pl-5 flex flex-col gap-3 transition-all
+      hover:border-primary/50 hover:shadow-md hover:shadow-primary/5 cursor-pointer
       ${isCurrentTrack ? "border-primary bg-primary/5" : ""}
     `}
     >
+      {/* Per-expansion accent bar — the closest thing to album art this
+          catalogue has, since none of the tracks have real cover images. */}
+      <span
+        className="absolute inset-y-0 left-0 w-1"
+        style={{ backgroundColor: expansionAccent(track.expansion) }}
+        aria-hidden
+      />
+
       <div className="flex items-start justify-between gap-2">
         <div>
           <Link href={`/track/${track.id}`}>

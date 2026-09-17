@@ -4,6 +4,7 @@ import { usePlayerStore } from "@/hooks/usePlayerStore";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { SeekBar } from "./SeekBar";
+import { expansionAccent } from "@/lib/utils";
 import { Shuffle, SkipBack, SkipForward } from "lucide-react";
 
 export function PlayerBar() {
@@ -39,30 +40,39 @@ export function PlayerBar() {
     }
 
     return (
-        <div className="fixed bottom-0 left-0 right-0 z-50 border-t bg-background/95 backdrop-blur supports-backdrop-filter:bg-background/60">
+        <div
+            className="fixed bottom-0 left-0 right-0 z-50 bg-background/95 backdrop-blur supports-backdrop-filter:bg-background/60 shadow-[0_-1px_0_var(--border),0_-12px_24px_-12px_oklch(0.78_0.15_75/15%)]"
+        >
             <div className="mx-auto flex max-w-7xl flex-col gap-2 px-6 py-3">
                 {/* Track info + controls */}
                 <div className="flex items-center justify-between">
-                    <div className="flex flex-col gap-0.5">
-                        <span className="text-sm font-medium">
-                            {currentTrack.title}
-                        </span>
-                        <div className="flex items-center gap-2">
-                            <span className="text-xs text-muted-foreground">
-                                {currentTrack.expansion}
+                    <div className="flex items-center gap-3 min-w-0">
+                        <span
+                            className="hidden sm:block h-8 w-1 shrink-0 rounded-full"
+                            style={{ backgroundColor: expansionAccent(currentTrack.expansion) }}
+                            aria-hidden
+                        />
+                        <div className="flex flex-col gap-0.5 min-w-0">
+                            <span className="font-heading text-sm font-semibold truncate">
+                                {currentTrack.title}
                             </span>
-                            <Badge variant="secondary" className="text-xs">
-                                {currentTrack.mood[0]}
-                            </Badge>
+                            <div className="flex items-center gap-2">
+                                <span className="text-xs text-muted-foreground">
+                                    {currentTrack.expansion}
+                                </span>
+                                <Badge variant="secondary" className="text-xs">
+                                    {currentTrack.mood[0]}
+                                </Badge>
+                            </div>
+                            {upNextTrack && (
+                                <span className="text-xs text-muted-foreground truncate">
+                                    Up next: {upNextTrack.title}
+                                </span>
+                            )}
                         </div>
-                        {upNextTrack && (
-                            <span className="text-xs text-muted-foreground">
-                                Up next: {upNextTrack.title}
-                            </span>
-                        )}
                     </div>
 
-                    <div className="flex items-center gap-1">
+                    <div className="flex items-center gap-1 shrink-0">
                         <Button
                             variant="ghost"
                             size="icon-sm"
@@ -83,8 +93,9 @@ export function PlayerBar() {
                             <SkipBack />
                         </Button>
                         <Button
-                            variant="outline"
+                            variant={isPlaying ? "default" : "outline"}
                             size="sm"
+                            className={isPlaying ? "shadow-sm shadow-primary/30" : ""}
                             onClick={handlePlayPause}
                         >
                             {isPlaying ? "⏸ Pause" : "▶ Resume"}

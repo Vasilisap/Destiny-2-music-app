@@ -35,13 +35,14 @@ function Navbar() {
 
   return (
     <>
-      <nav className="border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 sticky top-0 z-40">
+      <nav className="border-b bg-background/95 backdrop-blur supports-backdrop-filter:bg-background/60 sticky top-0 z-40">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 h-14">
           {/* Logo */}
           <Link
             href="/"
-            className="font-semibold text-sm tracking-tight hover:text-primary transition-colors"
+            className="font-heading font-semibold text-sm tracking-wide uppercase hover:text-primary transition-colors flex items-center gap-1.5"
           >
+            <span className="size-1.5 rounded-full bg-primary" aria-hidden />
             D2 OST
           </Link>
 
@@ -55,7 +56,7 @@ function Navbar() {
                   px-3 py-1.5 rounded-md text-sm transition-colors
                   ${
                     pathname === link.href
-                      ? "bg-secondary text-foreground font-medium"
+                      ? "bg-primary/10 text-primary font-medium"
                       : "text-muted-foreground hover:text-foreground hover:bg-secondary/50"
                   }
                 `}
