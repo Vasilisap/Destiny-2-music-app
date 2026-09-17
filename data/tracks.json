@@ -4,8 +4,14 @@
         "title": "EDZ",
         "expansion": "Red War",
         "youtubeId": "2q4dWKUooTg",
-        "tags": ["ambient", "patrol"],
-        "mood": ["mysterious", "peaceful"],
+        "tags": [
+            "ambient",
+            "patrol"
+        ],
+        "mood": [
+            "mysterious",
+            "peaceful"
+        ],
         "composer": "Michael Salvatori"
     },
     {
@@ -13,8 +19,14 @@
         "title": "Of Starlight and the Dark",
         "expansion": "Forsaken",
         "youtubeId": "BTrIuOHvpAg",
-        "tags": ["ambient", "cutscene"],
-        "mood": ["melancholic", "mysterious"],
+        "tags": [
+            "ambient",
+            "cutscene"
+        ],
+        "mood": [
+            "melancholic",
+            "mysterious"
+        ],
         "composer": "Michael Salvatori"
     },
     {
@@ -22,8 +34,14 @@
         "title": "Abomination",
         "expansion": "Forsaken",
         "youtubeId": "vUt4vkmSwGA",
-        "tags": ["combat", "strike"],
-        "mood": ["epic", "tense"],
+        "tags": [
+            "combat",
+            "strike"
+        ],
+        "mood": [
+            "epic",
+            "tense"
+        ],
         "composer": "Michael Salvatori"
     },
     {
@@ -31,8 +49,14 @@
         "title": "Shadowkeep",
         "expansion": "Shadowkeep",
         "youtubeId": "nDCUH-HGPqc",
-        "tags": ["ambient", "cutscene"],
-        "mood": ["mysterious", "tense"],
+        "tags": [
+            "ambient",
+            "cutscene"
+        ],
+        "mood": [
+            "mysterious",
+            "tense"
+        ],
         "composer": "Skye Lewin"
     },
     {
@@ -40,8 +64,14 @@
         "title": "Europa",
         "expansion": "Beyond Light",
         "youtubeId": "0c_9VUNMvRk",
-        "tags": ["ambient", "patrol"],
-        "mood": ["peaceful", "melancholic"],
+        "tags": [
+            "ambient",
+            "patrol"
+        ],
+        "mood": [
+            "peaceful",
+            "melancholic"
+        ],
         "composer": "Skye Lewin"
     },
     {
@@ -49,8 +79,14 @@
         "title": "The Witch Queen",
         "expansion": "Witch Queen",
         "youtubeId": "RaC32yJB9po",
-        "tags": ["boss", "combat"],
-        "mood": ["epic", "tense"],
+        "tags": [
+            "boss",
+            "combat"
+        ],
+        "mood": [
+            "epic",
+            "tense"
+        ],
         "composer": "Skye Lewin"
     },
     {
@@ -58,8 +94,14 @@
         "title": "The Final Shape",
         "expansion": "The Final Shape",
         "youtubeId": "bn64p7dNpHs",
-        "tags": ["cutscene", "ambient"],
-        "mood": ["triumphant", "melancholic"],
+        "tags": [
+            "cutscene",
+            "ambient"
+        ],
+        "mood": [
+            "triumphant",
+            "melancholic"
+        ],
         "composer": "Michael Salvatori"
     },
     {
@@ -67,8 +109,14 @@
         "title": "The Wilds",
         "expansion": "Red War",
         "youtubeId": "3kUix1xS1_g",
-        "tags": ["cutscene", "ambient"],
-        "mood": ["epic", "tense"],
+        "tags": [
+            "cutscene",
+            "ambient"
+        ],
+        "mood": [
+            "epic",
+            "tense"
+        ],
         "composer": "Michael Salvatori, Skye Lewin"
     },
     {
@@ -76,8 +124,1361 @@
         "title": "Be Brave",
         "expansion": "Red War",
         "youtubeId": "zwh8N8RJeck",
-        "tags": ["cutscene", "ambient"],
-        "mood": ["epic", "tense"],
+        "tags": [
+            "cutscene",
+            "ambient"
+        ],
+        "mood": [
+            "epic",
+            "tense"
+        ],
         "composer": "Michael Salvatori, Skye Lewin"
+    },
+    {
+        "id": "inner-light",
+        "title": "Inner Light",
+        "expansion": "Red War",
+        "youtubeId": "W5fyUOgV9rg",
+        "tags": [
+            "cutscene"
+        ],
+        "mood": [
+            "triumphant",
+            "epic"
+        ],
+        "composer": "Michael Salvatori, Skye Lewin, Rotem Moav",
+        "duration": 319
+    },
+    {
+        "id": "last-rite",
+        "title": "Last Rite",
+        "expansion": "Red War",
+        "youtubeId": "CKhCuCjcaiw",
+        "tags": [
+            "cutscene"
+        ],
+        "mood": [
+            "tense",
+            "melancholic"
+        ],
+        "composer": "Michael Salvatori, Skye Lewin, Rotem Moav",
+        "duration": 111
+    },
+    {
+        "id": "rise",
+        "title": "Rise",
+        "expansion": "Red War",
+        "youtubeId": "intmEEVphig",
+        "tags": [
+            "cutscene"
+        ],
+        "mood": [
+            "epic",
+            "triumphant"
+        ],
+        "composer": "Michael Salvatori, C Paul Johnson, Skye Lewin",
+        "duration": 375
+    },
+    {
+        "id": "towerfall",
+        "title": "Towerfall",
+        "expansion": "Red War",
+        "youtubeId": "h4wVz7CwoCg",
+        "tags": [
+            "combat"
+        ],
+        "mood": [
+            "epic",
+            "tense"
+        ],
+        "composer": "Michael Salvatori, C Paul Johnson, Skye Lewin, Pieter Schlosser",
+        "duration": 173
+    },
+    {
+        "id": "lost-light",
+        "title": "Lost Light",
+        "expansion": "Red War",
+        "youtubeId": "35br_Xynn5U",
+        "tags": [
+            "ambient"
+        ],
+        "mood": [
+            "melancholic",
+            "mysterious"
+        ],
+        "composer": "Michael Salvatori, Skye Lewin",
+        "duration": 222
+    },
+    {
+        "id": "forge-ahead",
+        "title": "Forge Ahead",
+        "expansion": "Red War",
+        "youtubeId": "LzhaH6Mwbxg",
+        "tags": [
+            "cutscene"
+        ],
+        "mood": [
+            "triumphant",
+            "epic"
+        ],
+        "composer": "Michael Salvatori, C Paul Johnson, Skye Lewin",
+        "duration": 253
+    },
+    {
+        "id": "battle-stations",
+        "title": "Battle Stations",
+        "expansion": "Red War",
+        "youtubeId": "VX-4VLrEd5E",
+        "tags": [
+            "combat"
+        ],
+        "mood": [
+            "epic",
+            "tense"
+        ],
+        "composer": "Michael Salvatori, C Paul Johnson, Skye Lewin",
+        "duration": 276
+    },
+    {
+        "id": "utopia-fallen",
+        "title": "Utopia Fallen",
+        "expansion": "Red War",
+        "youtubeId": "jxl91ijCWl4",
+        "tags": [
+            "cutscene"
+        ],
+        "mood": [
+            "melancholic"
+        ],
+        "composer": "Michael Salvatori, Skye Lewin, Rotem Moav",
+        "duration": 216
+    },
+    {
+        "id": "lost-sector",
+        "title": "Lost Sector",
+        "expansion": "Red War",
+        "youtubeId": "r7T4XSJWUuY",
+        "tags": [
+            "patrol"
+        ],
+        "mood": [
+            "mysterious",
+            "tense"
+        ],
+        "composer": "Michael Salvatori, C Paul Johnson, Skye Lewin, Pieter Schlosser",
+        "duration": 202
+    },
+    {
+        "id": "journey",
+        "title": "Journey",
+        "expansion": "Red War",
+        "youtubeId": "hRALxZIxmwI",
+        "tags": [
+            "ambient"
+        ],
+        "mood": [
+            "peaceful",
+            "mysterious"
+        ],
+        "composer": "Michael Salvatori, Skye Lewin",
+        "duration": 437
+    },
+    {
+        "id": "view-from-orbit",
+        "title": "View from Orbit",
+        "expansion": "Red War",
+        "youtubeId": "gPBSEqbkEIE",
+        "tags": [
+            "social"
+        ],
+        "mood": [
+            "peaceful"
+        ],
+        "composer": "Michael Salvatori, C Paul Johnson, Skye Lewin",
+        "duration": 138
+    },
+    {
+        "id": "red-legion",
+        "title": "Red Legion",
+        "expansion": "Red War",
+        "youtubeId": "ICTsHaTukl4",
+        "tags": [
+            "combat"
+        ],
+        "mood": [
+            "epic",
+            "tense"
+        ],
+        "composer": "Michael Salvatori, C Paul Johnson, Skye Lewin",
+        "duration": 193
+    },
+    {
+        "id": "new-dawn",
+        "title": "New Dawn",
+        "expansion": "Red War",
+        "youtubeId": "hpVldLqs-eQ",
+        "tags": [
+            "ambient"
+        ],
+        "mood": [
+            "peaceful",
+            "triumphant"
+        ],
+        "composer": "Michael Salvatori, Skye Lewin",
+        "duration": 134
+    },
+    {
+        "id": "what-we-fight-for",
+        "title": "What We Fight For",
+        "expansion": "Red War",
+        "youtubeId": "AeuhcP6NQZQ",
+        "tags": [
+            "cutscene"
+        ],
+        "mood": [
+            "triumphant"
+        ],
+        "composer": "Michael Salvatori, C Paul Johnson, Skye Lewin, Rotem Moav",
+        "duration": 134
+    },
+    {
+        "id": "leviathan",
+        "title": "Leviathan",
+        "expansion": "Red War",
+        "youtubeId": "maAIiGf32U4",
+        "tags": [
+            "raid"
+        ],
+        "mood": [
+            "mysterious",
+            "epic"
+        ],
+        "composer": "Michael Salvatori, C Paul Johnson, Skye Lewin, Pieter Schlosser",
+        "duration": 157
+    },
+    {
+        "id": "holliday",
+        "title": "Holliday",
+        "expansion": "Red War",
+        "youtubeId": "ETI3z58T8U0",
+        "tags": [
+            "cutscene"
+        ],
+        "mood": [
+            "peaceful",
+            "melancholic"
+        ],
+        "composer": "Michael Salvatori, C Paul Johnson, Skye Lewin",
+        "duration": 291
+    },
+    {
+        "id": "the-farm",
+        "title": "The Farm",
+        "expansion": "Red War",
+        "youtubeId": "Ze97KWKqZnY",
+        "tags": [
+            "social"
+        ],
+        "mood": [
+            "peaceful"
+        ],
+        "composer": "Michael Salvatori, Skye Lewin, Michael Sechrist",
+        "duration": 242
+    },
+    {
+        "id": "payback",
+        "title": "Payback",
+        "expansion": "Red War",
+        "youtubeId": "8fJm3RY2lAY",
+        "tags": [
+            "combat"
+        ],
+        "mood": [
+            "epic",
+            "tense"
+        ],
+        "composer": "Michael Salvatori, Skye Lewin, Rotem Moav",
+        "duration": 312
+    },
+    {
+        "id": "homecoming",
+        "title": "Homecoming",
+        "expansion": "Red War",
+        "youtubeId": "nb_F_84rlHo",
+        "tags": [
+            "cutscene"
+        ],
+        "mood": [
+            "melancholic",
+            "peaceful"
+        ],
+        "composer": "Michael Salvatori, C Paul Johnson, Skye Lewin, Michael Sechrist",
+        "duration": 104
+    },
+    {
+        "id": "travelers-dream",
+        "title": "Traveler's Dream",
+        "expansion": "Red War",
+        "youtubeId": "gpK4-FQC-gA",
+        "tags": [
+            "ambient"
+        ],
+        "mood": [
+            "mysterious",
+            "peaceful"
+        ],
+        "composer": "Michael Salvatori, C Paul Johnson, Skye Lewin",
+        "duration": 121
+    },
+    {
+        "id": "ikora",
+        "title": "Ikora",
+        "expansion": "Red War",
+        "youtubeId": "FSndtAT8-mc",
+        "tags": [
+            "cutscene",
+            "social"
+        ],
+        "mood": [
+            "mysterious"
+        ],
+        "composer": "Michael Salvatori, C Paul Johnson, Skye Lewin",
+        "duration": 332
+    },
+    {
+        "id": "nessus",
+        "title": "Nessus",
+        "expansion": "Red War",
+        "youtubeId": "5xhdeD5XtB0",
+        "tags": [
+            "patrol"
+        ],
+        "mood": [
+            "mysterious",
+            "peaceful"
+        ],
+        "composer": "Michael Salvatori, C Paul Johnson, Skye Lewin",
+        "duration": 208
+    },
+    {
+        "id": "the-hunted",
+        "title": "The Hunted",
+        "expansion": "Red War",
+        "youtubeId": "D75Q-9wCzGM",
+        "tags": [
+            "combat"
+        ],
+        "mood": [
+            "tense"
+        ],
+        "composer": "Michael Salvatori, Skye Lewin",
+        "duration": 249
+    },
+    {
+        "id": "pathfinder",
+        "title": "Pathfinder",
+        "expansion": "Red War",
+        "youtubeId": "A999rUV3CYU",
+        "tags": [
+            "patrol"
+        ],
+        "mood": [
+            "peaceful",
+            "mysterious"
+        ],
+        "composer": "Michael Salvatori, Skye Lewin, Rotem Moav",
+        "duration": 202
+    },
+    {
+        "id": "spark",
+        "title": "Spark",
+        "expansion": "Red War",
+        "youtubeId": "kjMwOpDWnZQ",
+        "tags": [
+            "ambient"
+        ],
+        "mood": [
+            "mysterious",
+            "peaceful"
+        ],
+        "composer": "Michael Salvatori, Skye Lewin",
+        "duration": 221
+    },
+    {
+        "id": "scavengers-den",
+        "title": "Scavenger's Den",
+        "expansion": "Red War",
+        "youtubeId": "Lb967keVvjg",
+        "tags": [
+            "patrol"
+        ],
+        "mood": [
+            "tense",
+            "mysterious"
+        ],
+        "composer": "Michael Salvatori, C Paul Johnson, Skye Lewin",
+        "duration": 313
+    },
+    {
+        "id": "dominus-ghaul",
+        "title": "Dominus Ghaul",
+        "expansion": "Red War",
+        "youtubeId": "jOjyJSo1HmI",
+        "tags": [
+            "boss"
+        ],
+        "mood": [
+            "epic",
+            "tense"
+        ],
+        "composer": "Michael Salvatori, C Paul Johnson, Skye Lewin",
+        "duration": 263
+    },
+    {
+        "id": "riptide",
+        "title": "Riptide",
+        "expansion": "Red War",
+        "youtubeId": "hYOQMfms-7U",
+        "tags": [
+            "combat"
+        ],
+        "mood": [
+            "epic",
+            "tense"
+        ],
+        "composer": "Michael Salvatori, C Paul Johnson, Skye Lewin",
+        "duration": 205
+    },
+    {
+        "id": "titan",
+        "title": "Titan",
+        "expansion": "Red War",
+        "youtubeId": "L8Dfb_C3L9s",
+        "tags": [
+            "patrol"
+        ],
+        "mood": [
+            "mysterious",
+            "peaceful"
+        ],
+        "composer": "Michael Salvatori, Skye Lewin, Pieter Schlosser",
+        "duration": 204
+    },
+    {
+        "id": "legions-march",
+        "title": "Legion's March",
+        "expansion": "Red War",
+        "youtubeId": "lfonRZ9XQNw",
+        "tags": [
+            "combat"
+        ],
+        "mood": [
+            "epic",
+            "tense"
+        ],
+        "composer": "Michael Salvatori, C Paul Johnson, Skye Lewin, Rotem Moav",
+        "duration": 136
+    },
+    {
+        "id": "home-of-the-brave",
+        "title": "Home of the Brave",
+        "expansion": "Red War",
+        "youtubeId": "PaFT2OBLY8k",
+        "tags": [
+            "cutscene"
+        ],
+        "mood": [
+            "triumphant"
+        ],
+        "composer": "Michael Salvatori, Skye Lewin",
+        "duration": 164
+    },
+    {
+        "id": "a-new-frontier",
+        "title": "A New Frontier",
+        "expansion": "Red War",
+        "youtubeId": "A-aBXrk2Ifg",
+        "tags": [
+            "cutscene"
+        ],
+        "mood": [
+            "triumphant",
+            "peaceful"
+        ],
+        "composer": "Michael Salvatori, C Paul Johnson, Skye Lewin",
+        "duration": 172
+    },
+    {
+        "id": "into-the-light",
+        "title": "Into the Light",
+        "expansion": "Red War",
+        "youtubeId": "rNTt5e418ok",
+        "tags": [
+            "cutscene"
+        ],
+        "mood": [
+            "triumphant"
+        ],
+        "composer": "Michael Salvatori, C Paul Johnson, Skye Lewin",
+        "duration": 156
+    },
+    {
+        "id": "voyage",
+        "title": "Voyage",
+        "expansion": "Red War",
+        "youtubeId": "DQBOxotb21s",
+        "tags": [
+            "ambient"
+        ],
+        "mood": [
+            "peaceful"
+        ],
+        "composer": "Michael Salvatori, Skye Lewin",
+        "duration": 128
+    },
+    {
+        "id": "arcadia",
+        "title": "Arcadia",
+        "expansion": "Red War",
+        "youtubeId": "qN2pYvX22JE",
+        "tags": [
+            "patrol"
+        ],
+        "mood": [
+            "peaceful",
+            "mysterious"
+        ],
+        "composer": "Michael Salvatori, C Paul Johnson, Skye Lewin",
+        "duration": 195
+    },
+    {
+        "id": "no-mercy",
+        "title": "No Mercy",
+        "expansion": "Red War",
+        "youtubeId": "We0PoxI6pfY",
+        "tags": [
+            "combat"
+        ],
+        "mood": [
+            "tense",
+            "epic"
+        ],
+        "composer": "Michael Salvatori, C Paul Johnson, Skye Lewin",
+        "duration": 282
+    },
+    {
+        "id": "the-blight",
+        "title": "The Blight",
+        "expansion": "Red War",
+        "youtubeId": "iY-5uKXBMc4",
+        "tags": [
+            "patrol"
+        ],
+        "mood": [
+            "tense",
+            "mysterious"
+        ],
+        "composer": "Michael Salvatori, C Paul Johnson, Skye Lewin, Rotem Moav",
+        "duration": 187
+    },
+    {
+        "id": "guardians-sacrifice",
+        "title": "Guardian's Sacrifice",
+        "expansion": "Red War",
+        "youtubeId": "fXd3969_JEw",
+        "tags": [
+            "cutscene"
+        ],
+        "mood": [
+            "melancholic"
+        ],
+        "composer": "Michael Salvatori, Skye Lewin",
+        "duration": 87
+    },
+    {
+        "id": "resist-the-legion",
+        "title": "Resist the Legion",
+        "expansion": "Red War",
+        "youtubeId": "ScdeG9c7JZM",
+        "tags": [
+            "combat"
+        ],
+        "mood": [
+            "epic",
+            "tense"
+        ],
+        "composer": "Michael Salvatori, C Paul Johnson, Skye Lewin",
+        "duration": 184
+    },
+    {
+        "id": "sanctuary",
+        "title": "Sanctuary",
+        "expansion": "Red War",
+        "youtubeId": "FChoXbstmmE",
+        "tags": [
+            "social"
+        ],
+        "mood": [
+            "peaceful"
+        ],
+        "composer": "Michael Salvatori, C Paul Johnson, Skye Lewin",
+        "duration": 149
+    },
+    {
+        "id": "the-last-city",
+        "title": "The Last City",
+        "expansion": "Red War",
+        "youtubeId": "b7Mu0bFv3M4",
+        "tags": [
+            "social"
+        ],
+        "mood": [
+            "peaceful",
+            "melancholic"
+        ],
+        "composer": "Michael Salvatori, Skye Lewin",
+        "duration": 169
+    },
+    {
+        "id": "forsaken",
+        "title": "Forsaken",
+        "expansion": "Forsaken",
+        "youtubeId": "KwliP8_YqEc",
+        "tags": [
+            "cutscene"
+        ],
+        "mood": [
+            "epic",
+            "melancholic"
+        ],
+        "composer": "Michael Salvatori, Skye Lewin",
+        "duration": 263
+    },
+    {
+        "id": "the-fanatic",
+        "title": "The Fanatic",
+        "expansion": "Forsaken",
+        "youtubeId": "Ceegg6NosyE",
+        "tags": [
+            "boss"
+        ],
+        "mood": [
+            "tense",
+            "epic"
+        ],
+        "composer": "Skye Lewin, Michael Salvatori",
+        "duration": 281
+    },
+    {
+        "id": "thin-line",
+        "title": "Thin Line",
+        "expansion": "Forsaken",
+        "youtubeId": "96Ycg5oF1Y0",
+        "tags": [
+            "cutscene"
+        ],
+        "mood": [
+            "tense"
+        ],
+        "composer": "Michael Salvatori, Skye Lewin",
+        "duration": 151
+    },
+    {
+        "id": "once-upon-a-time-in-the-reef",
+        "title": "Once Upon a Time in the Reef",
+        "expansion": "Forsaken",
+        "youtubeId": "LB6ZTCVsWUk",
+        "tags": [
+            "cutscene"
+        ],
+        "mood": [
+            "mysterious",
+            "melancholic"
+        ],
+        "composer": "Michael Salvatori, Skye Lewin",
+        "duration": 206
+    },
+    {
+        "id": "guns-blazin",
+        "title": "Guns Blazin'",
+        "expansion": "Forsaken",
+        "youtubeId": "gntrkJMCQOk",
+        "tags": [
+            "combat"
+        ],
+        "mood": [
+            "epic"
+        ],
+        "composer": "Skye Lewin, C Paul Johnson, Michael Salvatori",
+        "duration": 144
+    },
+    {
+        "id": "tangled-shore",
+        "title": "Tangled Shore",
+        "expansion": "Forsaken",
+        "youtubeId": "xL7nqgr6ItU",
+        "tags": [
+            "patrol"
+        ],
+        "mood": [
+            "mysterious",
+            "peaceful"
+        ],
+        "composer": "Michael Sechrist, Skye Lewin, Michael Salvatori",
+        "duration": 54
+    },
+    {
+        "id": "the-rifleman",
+        "title": "The Rifleman",
+        "expansion": "Forsaken",
+        "youtubeId": "ntF_zUWuiVA",
+        "tags": [
+            "cutscene"
+        ],
+        "mood": [
+            "tense"
+        ],
+        "composer": "Michael Sechrist, Skye Lewin, Michael Salvatori",
+        "duration": 129
+    },
+    {
+        "id": "keep-of-voices",
+        "title": "Keep of Voices",
+        "expansion": "Forsaken",
+        "youtubeId": "EirNmpAcEbg",
+        "tags": [
+            "ambient",
+            "patrol"
+        ],
+        "mood": [
+            "mysterious"
+        ],
+        "composer": "Brendon Williams, Michael Salvatori, Skye Lewin",
+        "duration": 299
+    },
+    {
+        "id": "watchtower",
+        "title": "Watchtower",
+        "expansion": "Forsaken",
+        "youtubeId": "dgWBLYAq968",
+        "tags": [
+            "patrol"
+        ],
+        "mood": [
+            "mysterious",
+            "tense"
+        ],
+        "composer": "Wilbert Roget II, Skye Lewin, Michael Salvatori",
+        "duration": 243
+    },
+    {
+        "id": "the-machinist",
+        "title": "The Machinist",
+        "expansion": "Forsaken",
+        "youtubeId": "7-_uYOeSWqw",
+        "tags": [
+            "cutscene"
+        ],
+        "mood": [
+            "tense"
+        ],
+        "composer": "Pieter Schlosser, Skye Lewin, Michael Salvatori",
+        "duration": 263
+    },
+    {
+        "id": "the-dreaming-city",
+        "title": "The Dreaming City",
+        "expansion": "Forsaken",
+        "youtubeId": "rfUpu6Q4gEI",
+        "tags": [
+            "patrol"
+        ],
+        "mood": [
+            "mysterious",
+            "peaceful"
+        ],
+        "composer": "Rotem Moav, Skye Lewin, Michael Salvatori",
+        "duration": 265
+    },
+    {
+        "id": "scorned",
+        "title": "Scorned",
+        "expansion": "Forsaken",
+        "youtubeId": "ES5Kv2joMVc",
+        "tags": [
+            "combat"
+        ],
+        "mood": [
+            "tense"
+        ],
+        "composer": "Skye Lewin, Michael Salvatori",
+        "duration": 109
+    },
+    {
+        "id": "the-trickster",
+        "title": "The Trickster",
+        "expansion": "Forsaken",
+        "youtubeId": "AnHJ2lCx01k",
+        "tags": [
+            "boss"
+        ],
+        "mood": [
+            "mysterious",
+            "tense"
+        ],
+        "composer": "Rotem Moav, Skye Lewin, Michael Salvatori",
+        "duration": 144
+    },
+    {
+        "id": "queens-oracle",
+        "title": "Queen's Oracle",
+        "expansion": "Forsaken",
+        "youtubeId": "mhlZSTZQLYc",
+        "tags": [
+            "cutscene"
+        ],
+        "mood": [
+            "mysterious"
+        ],
+        "composer": "Michael Salvatori, Skye Lewin, C Paul Johnson",
+        "duration": 256
+    },
+    {
+        "id": "the-rider",
+        "title": "The Rider",
+        "expansion": "Forsaken",
+        "youtubeId": "02ugw-qH5qw",
+        "tags": [
+            "cutscene"
+        ],
+        "mood": [
+            "tense",
+            "melancholic"
+        ],
+        "composer": "Josh Mosser, Skye Lewin, Michael Salvatori",
+        "duration": 235
+    },
+    {
+        "id": "shell-of-what-was",
+        "title": "Shell of What Was",
+        "expansion": "Forsaken",
+        "youtubeId": "O6m8VHsDznM",
+        "tags": [
+            "cutscene"
+        ],
+        "mood": [
+            "melancholic"
+        ],
+        "composer": "Kris Dirksen, Skye Lewin, Michael Salvatori",
+        "duration": 106
+    },
+    {
+        "id": "the-hangman",
+        "title": "The Hangman",
+        "expansion": "Forsaken",
+        "youtubeId": "XzKm36_F7T0",
+        "tags": [
+            "boss"
+        ],
+        "mood": [
+            "tense",
+            "epic"
+        ],
+        "composer": "Rotem Moav, Skye Lewin, Michael Salvatori",
+        "duration": 194
+    },
+    {
+        "id": "the-man-they-called-cayde",
+        "title": "The Man They Called Cayde",
+        "expansion": "Forsaken",
+        "youtubeId": "8fLiDgoIm88",
+        "tags": [
+            "cutscene"
+        ],
+        "mood": [
+            "melancholic"
+        ],
+        "composer": "Skye Lewin, Michael Salvatori",
+        "duration": 280
+    },
+    {
+        "id": "darkness-gathers",
+        "title": "Darkness Gathers",
+        "expansion": "Forsaken",
+        "youtubeId": "748ww9NkmX4",
+        "tags": [
+            "ambient"
+        ],
+        "mood": [
+            "tense",
+            "mysterious"
+        ],
+        "composer": "Michael Salvatori, Skye Lewin, C Paul Johnson",
+        "duration": 305
+    },
+    {
+        "id": "guardian-down",
+        "title": "Guardian Down",
+        "expansion": "Forsaken",
+        "youtubeId": "ewmEXKPyCeU",
+        "tags": [
+            "cutscene"
+        ],
+        "mood": [
+            "melancholic"
+        ],
+        "composer": "Skye Lewin, C Paul Johnson, Michael Salvatori",
+        "duration": 252
+    },
+    {
+        "id": "gunslinger",
+        "title": "Gunslinger",
+        "expansion": "Forsaken",
+        "youtubeId": "sSMw4E_2psA",
+        "tags": [
+            "cutscene"
+        ],
+        "mood": [
+            "epic"
+        ],
+        "composer": "Michael Salvatori, Skye Lewin, C Paul Johnson",
+        "duration": 301
+    },
+    {
+        "id": "mists-of-memory",
+        "title": "Mists of Memory",
+        "expansion": "Forsaken",
+        "youtubeId": "g_Wd6pjXCac",
+        "tags": [
+            "ambient"
+        ],
+        "mood": [
+            "melancholic",
+            "mysterious"
+        ],
+        "composer": "Brendon Williams, Skye Lewin, Michael Salvatori",
+        "duration": 185
+    },
+    {
+        "id": "uncorrupted",
+        "title": "Uncorrupted",
+        "expansion": "Forsaken",
+        "youtubeId": "7FkWjREstCU",
+        "tags": [
+            "combat"
+        ],
+        "mood": [
+            "tense"
+        ],
+        "composer": "Pieter Schlosser, Skye Lewin, Michael Salvatori",
+        "duration": 210
+    },
+    {
+        "id": "shaper-of-wishes",
+        "title": "Shaper of Wishes",
+        "expansion": "Forsaken",
+        "youtubeId": "eCISGAEH5oI",
+        "tags": [
+            "cutscene"
+        ],
+        "mood": [
+            "mysterious"
+        ],
+        "composer": "Rotem Moav, Skye Lewin, Michael Salvatori, C Paul Johnson",
+        "duration": 192
+    },
+    {
+        "id": "fall-of-the-eliksni",
+        "title": "Fall of the Eliksni",
+        "expansion": "Forsaken",
+        "youtubeId": "bAZaxHFHesU",
+        "tags": [
+            "combat"
+        ],
+        "mood": [
+            "epic",
+            "tense"
+        ],
+        "composer": "Michael Salvatori, Skye Lewin",
+        "duration": 226
+    },
+    {
+        "id": "the-mindbender",
+        "title": "The Mindbender",
+        "expansion": "Forsaken",
+        "youtubeId": "6n4H6DaimpM",
+        "tags": [
+            "boss"
+        ],
+        "mood": [
+            "tense"
+        ],
+        "composer": "Rotem Moav, Skye Lewin, Michael Salvatori, C Paul Johnson",
+        "duration": 229
+    },
+    {
+        "id": "accursed",
+        "title": "Accursed",
+        "expansion": "Forsaken",
+        "youtubeId": "BBIJYPNjrTw",
+        "tags": [
+            "combat"
+        ],
+        "mood": [
+            "tense",
+            "mysterious"
+        ],
+        "composer": "Wilbert Roget II, Skye Lewin, Michael Salvatori",
+        "duration": 241
+    },
+    {
+        "id": "sacrifice",
+        "title": "Sacrifice",
+        "expansion": "Forsaken",
+        "youtubeId": "4Ynv54CcUms",
+        "tags": [
+            "cutscene"
+        ],
+        "mood": [
+            "melancholic"
+        ],
+        "composer": "Rotem Moav, Skye Lewin, Michael Salvatori",
+        "duration": 117
+    },
+    {
+        "id": "the-mad-bomber",
+        "title": "The Mad Bomber",
+        "expansion": "Forsaken",
+        "youtubeId": "6Mv54QyOjq8",
+        "tags": [
+            "boss"
+        ],
+        "mood": [
+            "tense"
+        ],
+        "composer": "Rotem Moav, Skye Lewin, Michael Salvatori",
+        "duration": 98
+    },
+    {
+        "id": "gambit",
+        "title": "Gambit",
+        "expansion": "Forsaken",
+        "youtubeId": "z60BFLUBEpI",
+        "tags": [
+            "combat"
+        ],
+        "mood": [
+            "tense",
+            "epic"
+        ],
+        "composer": "Kris Dirksen, Skye Lewin, Michael Salvatori, C Paul Johnson",
+        "duration": 201
+    },
+    {
+        "id": "eden",
+        "title": "Eden",
+        "expansion": "Shadowkeep",
+        "youtubeId": "OqBfmUB2-8g",
+        "tags": [
+            "patrol"
+        ],
+        "mood": [
+            "mysterious",
+            "peaceful"
+        ],
+        "composer": "Rotem Moav, Skye Lewin, Michael Salvatori, Josh Mosser",
+        "duration": 103
+    },
+    {
+        "id": "terroris-somnum",
+        "title": "Terroris Somnum",
+        "expansion": "Shadowkeep",
+        "youtubeId": "6DnRCQSuB88",
+        "tags": [
+            "ambient"
+        ],
+        "mood": [
+            "mysterious",
+            "tense"
+        ],
+        "composer": "Skye Lewin, Michael Salvatori, Josh Mosser",
+        "duration": 221
+    },
+    {
+        "id": "call-to-arms",
+        "title": "Call to Arms",
+        "expansion": "Shadowkeep",
+        "youtubeId": "X7JxeC14yCI",
+        "tags": [
+            "combat"
+        ],
+        "mood": [
+            "epic"
+        ],
+        "composer": "Michael Salvatori, Skye Lewin, Josh Mosser",
+        "duration": 140
+    },
+    {
+        "id": "whispers-in-the-dark",
+        "title": "Whispers in the Dark",
+        "expansion": "Shadowkeep",
+        "youtubeId": "sQGuKky9Ds0",
+        "tags": [
+            "ambient"
+        ],
+        "mood": [
+            "mysterious",
+            "tense"
+        ],
+        "composer": "Skye Lewin, Michael Salvatori, Josh Mosser",
+        "duration": 125
+    },
+    {
+        "id": "eye-of-the-storm",
+        "title": "Eye of the Storm",
+        "expansion": "Shadowkeep",
+        "youtubeId": "kXYCBofavQo",
+        "tags": [
+            "combat"
+        ],
+        "mood": [
+            "epic",
+            "tense"
+        ],
+        "composer": "Michael Salvatori, Skye Lewin",
+        "duration": 188
+    },
+    {
+        "id": "dark-horizons",
+        "title": "Dark Horizons",
+        "expansion": "Shadowkeep",
+        "youtubeId": "cTI5YtedQhY",
+        "tags": [
+            "ambient"
+        ],
+        "mood": [
+            "mysterious",
+            "tense"
+        ],
+        "composer": "Michael Salvatori, Skye Lewin",
+        "duration": 217
+    },
+    {
+        "id": "bloodline",
+        "title": "Bloodline",
+        "expansion": "Shadowkeep",
+        "youtubeId": "gs0-VNZf33U",
+        "tags": [
+            "combat"
+        ],
+        "mood": [
+            "tense"
+        ],
+        "composer": "Josh Mosser, Skye Lewin, Michael Salvatori, C Paul Johnson",
+        "duration": 212
+    },
+    {
+        "id": "solitude",
+        "title": "Solitude",
+        "expansion": "Shadowkeep",
+        "youtubeId": "yEwCpYWebbA",
+        "tags": [
+            "ambient"
+        ],
+        "mood": [
+            "melancholic",
+            "peaceful"
+        ],
+        "composer": "Michael Salvatori, Skye Lewin",
+        "duration": 156
+    },
+    {
+        "id": "necropolis",
+        "title": "Necropolis",
+        "expansion": "Shadowkeep",
+        "youtubeId": "MM-ilopL39M",
+        "tags": [
+            "patrol"
+        ],
+        "mood": [
+            "mysterious",
+            "tense"
+        ],
+        "composer": "Pieter Schlosser, Skye Lewin, Michael Salvatori, Josh Mosser",
+        "duration": 138
+    },
+    {
+        "id": "storm-the-keep",
+        "title": "Storm the Keep",
+        "expansion": "Shadowkeep",
+        "youtubeId": "CczzNftatos",
+        "tags": [
+            "combat"
+        ],
+        "mood": [
+            "epic"
+        ],
+        "composer": "Michael Salvatori, Skye Lewin, Josh Mosser",
+        "duration": 172
+    },
+    {
+        "id": "on-the-hunt",
+        "title": "On the Hunt",
+        "expansion": "Shadowkeep",
+        "youtubeId": "5rLfP8pFi0A",
+        "tags": [
+            "strike"
+        ],
+        "mood": [
+            "tense"
+        ],
+        "composer": "Rotem Moav, Skye Lewin, Michael Salvatori, Josh Mosser",
+        "duration": 160
+    },
+    {
+        "id": "hashlad-ns-fall",
+        "title": "Hashladûn's Fall",
+        "expansion": "Shadowkeep",
+        "youtubeId": "JhNcm-mt2OI",
+        "tags": [
+            "boss"
+        ],
+        "mood": [
+            "epic",
+            "tense"
+        ],
+        "composer": "Michael Salvatori, Skye Lewin, Josh Mosser, Pieter Schlosser",
+        "duration": 197
+    },
+    {
+        "id": "unworthy",
+        "title": "Unworthy",
+        "expansion": "Shadowkeep",
+        "youtubeId": "KxbU4YTYej4",
+        "tags": [
+            "boss"
+        ],
+        "mood": [
+            "tense"
+        ],
+        "composer": "Pieter Schlosser, Skye Lewin, Michael Salvatori, Josh Mosser",
+        "duration": 189
+    },
+    {
+        "id": "forgotten-wounds",
+        "title": "Forgotten Wounds",
+        "expansion": "Shadowkeep",
+        "youtubeId": "dzo2kVgCoDo",
+        "tags": [
+            "ambient"
+        ],
+        "mood": [
+            "melancholic"
+        ],
+        "composer": "Michael Sechrist, Skye Lewin, Michael Salvatori",
+        "duration": 156
+    },
+    {
+        "id": "heretical-omen",
+        "title": "Heretical Omen",
+        "expansion": "Shadowkeep",
+        "youtubeId": "ulz1z5ySeEk",
+        "tags": [
+            "ambient"
+        ],
+        "mood": [
+            "mysterious",
+            "tense"
+        ],
+        "composer": "Skye Lewin, Josh Mosser, Michael Salvatori, C Paul Johnson",
+        "duration": 181
+    },
+    {
+        "id": "respite",
+        "title": "Respite",
+        "expansion": "Shadowkeep",
+        "youtubeId": "_iWZTAhafwg",
+        "tags": [
+            "ambient"
+        ],
+        "mood": [
+            "peaceful"
+        ],
+        "composer": "Michael Salvatori, Skye Lewin, C Paul Johnson",
+        "duration": 188
+    },
+    {
+        "id": "escape-the-abyss",
+        "title": "Escape the Abyss",
+        "expansion": "Shadowkeep",
+        "youtubeId": "c7-eQjAMcBU",
+        "tags": [
+            "strike"
+        ],
+        "mood": [
+            "tense"
+        ],
+        "composer": "Rotem Moav, Skye Lewin, Michael Salvatori, Josh Mosser, C Paul Johnson",
+        "duration": 189
+    },
+    {
+        "id": "salvation",
+        "title": "Salvation",
+        "expansion": "Shadowkeep",
+        "youtubeId": "agoriO5FMjI",
+        "tags": [
+            "cutscene"
+        ],
+        "mood": [
+            "melancholic",
+            "peaceful"
+        ],
+        "composer": "Michael Sechrist, Skye Lewin, Michael Salvatori",
+        "duration": 108
+    },
+    {
+        "id": "apparitions",
+        "title": "Apparitions",
+        "expansion": "Shadowkeep",
+        "youtubeId": "QkqOxfW1Gus",
+        "tags": [
+            "ambient"
+        ],
+        "mood": [
+            "mysterious",
+            "tense"
+        ],
+        "composer": "Josh Mosser, Skye Lewin, Michael Salvatori, C Paul Johnson",
+        "duration": 201
+    },
+    {
+        "id": "temptation",
+        "title": "Temptation",
+        "expansion": "Shadowkeep",
+        "youtubeId": "oR4sbrVm_dk",
+        "tags": [
+            "ambient"
+        ],
+        "mood": [
+            "mysterious"
+        ],
+        "composer": "Rotem Moav, Skye Lewin, Michael Salvatori, Josh Mosser, C Paul Johnson",
+        "duration": 238
+    },
+    {
+        "id": "the-sanctified-mind",
+        "title": "The Sanctified Mind",
+        "expansion": "Shadowkeep",
+        "youtubeId": "LbtvAHIdjsk",
+        "tags": [
+            "boss",
+            "raid"
+        ],
+        "mood": [
+            "epic",
+            "tense"
+        ],
+        "composer": "Skye Lewin, Michael Salvatori",
+        "duration": 224
     }
 ]
